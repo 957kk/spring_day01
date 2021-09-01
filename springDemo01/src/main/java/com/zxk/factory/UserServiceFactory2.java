@@ -12,7 +12,7 @@ import com.zxk.service.impl.UserServiceImpl;
  **/
 public class UserServiceFactory2 {
     public  UserService getService(){
-        System.out.println("实例工厂创建");
+        System.out.println("实例工厂创建ffffd");
         return new UserServiceImpl();
     }
 }
