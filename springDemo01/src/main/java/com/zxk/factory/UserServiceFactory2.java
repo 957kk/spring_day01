@@ -11,7 +11,7 @@ import com.zxk.service.impl.UserServiceImpl;
  * @Create: 2021-09-01 18:50
  **/
 public class UserServiceFactory2 {
-    public  UserService getService(){
+    public UserService getService() {
         System.out.println("实例工厂创建");
         return new UserServiceImpl();
     }
