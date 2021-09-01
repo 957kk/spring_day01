@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 1.创建spring控制的资源  name，指定别名  scope，，singleton单例对象，protype，非单例-->
+    <bean id="userService" name="userService2,userService3"  scope="prototype" class="com.zxk.service.impl.UserServiceImpl"/>
+    <bean id="userServiceFactory" class="com.zxk.factory.UserServiceFactory" factory-method="getService"/>
+    <bean id="usf2" class="com.zxk.factory.UserServiceFactory2"/>
+    <bean id="usf3" factory-bean="usf2" factory-method="getService"/>
+</beans>
