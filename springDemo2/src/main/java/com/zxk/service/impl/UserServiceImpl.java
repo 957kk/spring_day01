@@ -15,6 +15,11 @@ public class UserServiceImpl implements UserService {
     private UserDao userDao;
     private int num;
 
+    public UserServiceImpl(UserDao userDao, int num) {
+        this.userDao = userDao;
+        this.num = num;
+    }
+
     public void setUserDao(UserDao userDao) {
         this.userDao = userDao;
     }

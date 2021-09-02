@@ -4,9 +4,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-<bean id="userService" class="com.zxk.service.impl.UserServiceImpl">
-    <property name="userDao" ref="userDao"/>
-    <property name="num" value="777"/>
-</bean>
-    <bean id="userDao" class="com.zxk.dao.impl.UserDaoImpl"/>
+    <!--<bean id="userService" class="com.zxk.service.impl.UserServiceImpl">
+        <property name="userDao" ref="userDao"/>
+        <property name="num" value="777"/>
+    </bean>-->
+    <bean id="userService" class="com.zxk.service.impl.UserServiceImpl">
+        <constructor-arg name="userDao" ref="userDao"/>
+        <constructor-arg name="num" value="666"/>
+    </bean>
+
+    <bean id="userDao" class="com.zxk.dao.impl.UserDaoImpl">
+        <constructor-arg index="1" value="1234"/>
+        <constructor-arg index="0" value="zs"/>
+    </bean>
 </beans>
