@@ -6,13 +6,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="springDemo4_mybatis" />
         <module name="springDemo01" />
+        <module name="springDemo3" />
         <module name="springDemo2" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="Spring_day01_05_综合案例spring整合mybatis" target="1.5" />
       <module name="springDemo01" target="1.8" />
       <module name="springDemo2" target="1.8" />
+      <module name="springDemo3" target="1.8" />
+      <module name="springDemo4_mybatis" target="1.8" />
+      <module name="springDemo4_mybatis (1)" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
