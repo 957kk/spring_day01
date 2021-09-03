@@ -1,6 +1,7 @@
 package com.zxk.config;
 
 import com.zxk.config.filter.MyTypeFilter;
+import com.zxk.importSelector.MyImportSelector;
 import org.springframework.context.annotation.*;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +27,6 @@ import org.springframework.stereotype.Service;
                 classes = MyTypeFilter.class
         ))
 @PropertySource("classpath:jdbc.properties")
-@Import({JDBCConfig.class, MybatisConfig.class})
+@Import({JDBCConfig.class, MybatisConfig.class, MyImportSelector.class})
 public class SpringConfig {
 }
