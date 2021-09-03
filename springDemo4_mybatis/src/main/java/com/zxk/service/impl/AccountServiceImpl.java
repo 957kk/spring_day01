@@ -18,7 +18,7 @@ import java.util.List;
 @Service("accountService")
 public class AccountServiceImpl implements AccountService {
 
-
+    @Autowired
     private AccountDao accountDao;
 
     public void setAccountDao(AccountDao accountDao) {

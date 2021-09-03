@@ -23,7 +23,9 @@ public class Test01 {
     public static void main(String[] args) {
         //method1();
         ApplicationContext cac = new AnnotationConfigApplicationContext(SpringConfig.class);
-       cac.getBean("dataSource");
+        AccountService accountService = (AccountService) cac.getBean("accountService");
+        List<Account> all = accountService.findAll();
+        System.out.println(all);
 
     }
 

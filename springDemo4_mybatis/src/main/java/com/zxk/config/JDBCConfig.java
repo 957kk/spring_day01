@@ -26,7 +26,6 @@ public class JDBCConfig {
 
     @Bean("dataSource")
     public DataSource getDataSource() {
-        System.out.println(driver);
         DruidDataSource dataSource = new DruidDataSource();
         dataSource.setDriverClassName(driver);
         dataSource.setUrl(url);

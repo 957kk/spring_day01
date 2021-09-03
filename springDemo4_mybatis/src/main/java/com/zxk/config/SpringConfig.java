@@ -1,9 +1,8 @@
 package com.zxk.config;
 
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
-import org.springframework.context.annotation.PropertySource;
+import com.zxk.config.filter.MyTypeFilter;
+import org.springframework.context.annotation.*;
+import org.springframework.stereotype.Service;
 
 /**
  * @program: spring_day01
@@ -13,8 +12,20 @@ import org.springframework.context.annotation.PropertySource;
  * @Create: 2021-09-02 17:03
  **/
 @Configuration
-@ComponentScan("com.zxk")
+//@ComponentScan("com.zxk")
+/*@ComponentScan(
+        value = "com.zxk",
+        excludeFilters = @ComponentScan.Filter(
+                type = FilterType.ANNOTATION,
+                classes = Service.class
+        ))*/
+@ComponentScan(
+        value = "com.zxk",
+        excludeFilters = @ComponentScan.Filter(
+                type = FilterType.CUSTOM,
+                classes = MyTypeFilter.class
+        ))
 @PropertySource("classpath:jdbc.properties")
-@Import({JDBCConfig.class,MybatisConfig.class})
+@Import({JDBCConfig.class, MybatisConfig.class})
 public class SpringConfig {
 }
