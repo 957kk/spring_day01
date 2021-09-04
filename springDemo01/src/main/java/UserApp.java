@@ -11,7 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  **/
 public class UserApp {
     public static void main(String[] args) {
-        ApplicationContext ctx=new ClassPathXmlApplicationContext("applicationContext.xml");
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
         UserService userService = (UserService) ctx.getBean("userService2");
         UserService userService2 = (UserService) ctx.getBean("userServiceFactory");
         UserService userService3 = (UserService) ctx.getBean("usf3");
