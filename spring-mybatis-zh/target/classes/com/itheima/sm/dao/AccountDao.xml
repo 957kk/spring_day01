@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.itheima.sm.dao.AccountDao">
+
+    <insert id="insertAccount">
+        INSERT INTO tb_account (id,money,name) VALUES (#{ac.id},#{ac.money},#{ac.name})
+    </insert>
+
+</mapper>
