@@ -10,6 +10,7 @@
         <module name="springDemo01" />
         <module name="springDemo3" />
         <module name="springDemo2" />
+        <module name="springDemo5" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +20,7 @@
       <module name="springDemo3" target="1.8" />
       <module name="springDemo4_mybatis" target="1.8" />
       <module name="springDemo4_mybatis (1)" target="1.8" />
+      <module name="springDemo5" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
