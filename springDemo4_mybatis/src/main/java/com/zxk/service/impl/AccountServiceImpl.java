@@ -15,7 +15,7 @@ import java.util.List;
  * @author 黑马程序员
  * @Company http://www.zxk.com
  */
-//@Service("accountService")
+@Service("accountService")
 public class AccountServiceImpl implements AccountService {
 
     @Autowired

@@ -14,7 +14,7 @@ public class App {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
         AccountService accountService = (AccountService) ctx.getBean("accountService");
         Account account = new Account();
-        account.setId(10001L);
+        account.setId(10002L);
         account.setName("赵飞虎");
         account.setMoney(10000000.99);
         accountService.save(account);

@@ -26,6 +26,7 @@ import org.springframework.stereotype.Service;
                 type = FilterType.CUSTOM,
                 classes = MyTypeFilter.class
         ))
+@EnableAspectJAutoProxy
 @PropertySource("classpath:jdbc.properties")
 @Import({JDBCConfig.class, MybatisConfig.class, MyImportSelector.class})
 public class SpringConfig {

@@ -1,7 +1,9 @@
 package com;
 
 import com.zxk.service.UserService;
+import com.zxk.service.config.SpringConfig;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
@@ -13,9 +15,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  **/
 public class UserApp {
     public static void main(String[] args) {
-        ApplicationContext act =new ClassPathXmlApplicationContext("applicationContext.xml");
+        //ApplicationContext act = new ClassPathXmlApplicationContext("applicationContext.xml");
+        ApplicationContext act = new AnnotationConfigApplicationContext(SpringConfig.class);
         UserService userService = (UserService) act.getBean("userService");
-        userService.show();
-        userService.a();
+        //userService.show(500);
+        //userService.a();
+        userService.b();
     }
 }

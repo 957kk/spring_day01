@@ -8,6 +8,9 @@ package com.zxk.service;
  * @Create: 2021-09-04 09:41
  **/
 public interface UserService {
-    void show();
-    void a();
+    void show(int i);
+
+    Integer a();
+
+    void b();
 }
